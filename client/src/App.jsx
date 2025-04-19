@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route, BrowserRouter} from 'react-router-dom'; 
+import Home from "./Home";
+import Tasks from "./Tasks"
 
 const App = () => {
   return (
-    <div>App</div>
-  ) 
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/tasks" element = {<Tasks/>} />
+      </Routes>
+    </BrowserRouter>
+    
+    
+  );
+};
 
-export default App
+export default App;
